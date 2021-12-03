@@ -38,30 +38,29 @@ import LoginPage from './pages/LoginPage';
 // 5. Zorg ervoor dat er een link en titel voor iedere post wordt gegenereerd
 
 
-
 function App() {
-  // We houden in de state bij of iemand is "ingelogd" (simpele versie)
-  const [isAuthenticated, toggleIsAuthenticated ] = useState(false);
+    // We houden in de state bij of iemand is "ingelogd" (simpele versie)
+    const [isAuthenticated, toggleIsAuthenticated] = useState(false);
 
-  return (
-    <>
-        <TopMenu />
-        <Switch>
-            <Route exact path="/">
-                <HomePage />
-            </Route>
-            <Route path="/blogpost-overview">
-                <BlogPostsOverviewPage />
-            </Route>
-            <Route path="/blogpost">
-                <BlogPostPage />
-            </Route>
-            <Route path="/login">
-                <LoginPage />
-            </Route>
-        </Switch>
-    </>
-  );
+    return (
+        <>
+            <TopMenu/>
+            <Switch>
+                <Route exact path="/">
+                    <HomePage/>
+                </Route>
+                <Route path="/blogpost-overview">
+                    <BlogPostsOverviewPage/>
+                </Route>
+                <Route path="/blogpost/:blogId">
+                    <BlogPostPage/>
+                </Route>
+                <Route path="/login">
+                    <LoginPage/>
+                </Route>
+            </Switch>
+        </>
+    );
 }
 
 export default App;
