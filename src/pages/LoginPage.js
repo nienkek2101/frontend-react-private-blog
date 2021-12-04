@@ -1,12 +1,16 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-function LoginPage() {
+function LoginPage({ isAuth, toggleAuth }) {
     const history = useHistory();
+    // console.log(isAuth);
 
     function signIn() {
         // console.log('Je bent ingelogd');
-        history.push('/blogpost-overview')
+        // e.preventDefault();
+        toggleAuth(true);
+        history.push('/blogpost-overview');
+        console.log(isAuth);
     }
     return (
         <>

@@ -44,19 +44,26 @@ function App() {
 
     return (
         <>
-            <TopMenu/>
+            <TopMenu
+                isAuth={isAuthenticated}
+                toggleAuth={toggleIsAuthenticated}
+            />
             <Switch>
                 <Route exact path="/">
                     <HomePage/>
                 </Route>
+
                 <Route path="/blogpost-overview">
-                    <BlogPostsOverviewPage/>
+                    {isAuthenticated ? <BlogPostsOverviewPage/> : ""}
                 </Route>
                 <Route path="/blogpost/:blogId">
-                    <BlogPostPage/>
+                    { isAuthenticated ? <BlogPostPage/> : ""}
                 </Route>
                 <Route path="/login">
-                    <LoginPage/>
+                    <LoginPage
+                    toggleAuth={toggleIsAuthenticated}
+                    isAuth={isAuthenticated}
+                    />
                 </Route>
             </Switch>
         </>

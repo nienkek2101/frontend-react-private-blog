@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import posts from '../data/posts.json';
 
 function BlogPostsOverviewPage() {
-    console.log(posts.length);
-    console.log(posts[1]);
-    console.log(posts[1].title);
+    // console.log(posts.length);
+    // console.log(posts[1]);
+    // console.log(posts[1].title);
     const numberOfBlogposts = posts.length;
     // const blogpostId = post.id;
     // const blogpostTitle = post.title;
