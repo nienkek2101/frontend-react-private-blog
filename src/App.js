@@ -66,6 +66,7 @@ function App() {
                     />
                 </Route>
             </Switch>
+            {console.log(isAuthenticated)}
         </>
     );
 }
