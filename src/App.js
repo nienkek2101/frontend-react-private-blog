@@ -42,6 +42,9 @@ function App() {
     // We houden in de state bij of iemand is "ingelogd" (simpele versie)
     const [isAuthenticated, toggleIsAuthenticated] = useState(false);
 
+    // in de uitwerkingen staat hier nog een optie dat waar je ook op klikt, je automatisch naar de login pagina
+    // wanneer je niet ingelogd bent.
+
     return (
         <>
             <TopMenu

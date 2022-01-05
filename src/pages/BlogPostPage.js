@@ -11,11 +11,11 @@ function BlogPostPage() {
 
     console.log(currentPost);
     return (
-        <>
+        <article>
             <h1>{currentPost.title}</h1>
             <h3>{currentPost.date}</h3>
             <p>{currentPost.content}</p>
-        </>
+        </article>
     );
 };
 

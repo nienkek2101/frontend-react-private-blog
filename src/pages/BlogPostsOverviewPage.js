@@ -18,7 +18,7 @@ function BlogPostsOverviewPage() {
     //
     // })
     return (
-        <>
+        <section>
             <h1>Blogpost overview pagina</h1>
             <h3>Aantal blogposts: {numberOfBlogposts}</h3>
             <ul>
@@ -40,7 +40,7 @@ function BlogPostsOverviewPage() {
                 {/*<li>8</li>*/}
 
             </ul>
-        </>
+        </section>
     );
 };
 

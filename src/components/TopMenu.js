@@ -19,10 +19,23 @@ function TopMenu({ isAuth, toggleAuth }) {
                     </li>
                     {isAuth ?
                         <>
-                            <li><NavLink to="/blogpost-overview" activeClassName="active-link">Blogposts</NavLink></li>
-                            <button type="button" onClick={signOut}>Uitloggen</button>
-                        </> : ""}
-                    {!isAuth ? <li><NavLink to="/login" activeClassName="active-link">Login</NavLink></li> : ""}
+                            <li>
+                                <NavLink to="/blogpost-overview" activeClassName="active-link">
+                                    Blogposts
+                                </NavLink>
+                            </li>
+                            <li>
+                                <button type="button" onClick={signOut}>
+                                    Uitloggen
+                                </button>
+                            </li>
+                        </>
+                        :
+                        <li>
+                            <NavLink to="/login" activeClassName="active-link">
+                                Login
+                            </NavLink>
+                        </li>}
                 </ul>
             </nav>
         </>
